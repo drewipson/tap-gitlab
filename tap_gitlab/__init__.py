@@ -854,7 +854,7 @@ def do_sync():
     for stream in CATALOG.get_selected_streams(STATE):
         singer.write_schema(stream.tap_stream_id, stream.schema.to_dict(), stream.key_properties)
 
-    sync_site_users()
+#    sync_site_users()
 
     for gid in gids:
         sync_group(gid, pids)
